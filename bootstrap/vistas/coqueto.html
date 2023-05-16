@@ -1,0 +1,38 @@
+{% extends 'padre/base.html' %}
+{% load static %}
+{% block titulo %}
+Coqueto
+{% endblock titulo %}
+{% block contenido %}
+<main class="container" style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 5%;">
+    <section style="margin: 3px; display: flex; flex-wrap: wrap;">
+        <div class="col" style="display: inline-flex; align-content: center; margin: 1%;" id="{{ meme.id }}">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-body">
+              <img src="{% static 'img/coqueto.jpeg' %}" class="card-img-top" href="#" style="width: 300px; height: 300px;">
+            </div>
+          </div>
+      </div>
+    </section>
+    <hr>
+    <section style="margin: 3px;">
+        <div>
+            <h1>Bio</h1>
+            <div >
+                <h2>Nombre</h2>
+                <p>Coqueto</p>
+                <h2>Autor</h2>
+                <p>Desconocido</p>
+                <h2>Id</h2>
+                <p>1</p>
+            </div>
+        </div>
+        <div>
+            <h1>Detalles</h1>
+            <div>
+                <p>Hrmno el perro es terrible croqueton como no te va a gustar</p>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock contenido %}

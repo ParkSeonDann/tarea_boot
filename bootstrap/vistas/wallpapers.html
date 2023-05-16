@@ -1,0 +1,29 @@
+{% extends 'padre/base.html' %}
+{% load static %}
+{% block titulo %}
+Wallpapers
+{% endblock titulo %}
+{% block contenido %}
+<main>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Wallpapers de perritos</h1>
+          <p class="lead text-body-secondary">En esta seccion se mostraran Wallpapers de perritos wonitos dios como amo los perros.</p>
+        </div>
+      </div>
+    </section>
+    {% for fondo in lista %}   
+    <div class="col" style="display: inline-flex; align-content: center; margin: 1%;" id="{{ meme.id }}">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-body">
+          <img src="{% static fondo.foto %}" class="card-img-top" href="#" style="width: 300px; height: 300px;">
+          <div class="card-header py-3" style="justify-items: center;">
+            <button class="btn btn-light"><h2 style="color: rgb(250, 121, 86);">{{ fondo.nombre }}</h2></button>
+          </div>
+        </div>
+      </div>
+  </div>
+  {% endfor %}
+</main>
+{% endblock contenido %}

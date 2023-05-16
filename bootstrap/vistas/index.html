@@ -1,0 +1,79 @@
+{% extends 'padre/base.html' %}
+{% load static %}
+{% block titulo %}
+    Inicio
+{% endblock titulo %}
+{% block contenido %}
+    <main>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'carousel/img/dog1.png' %}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'carousel/img/dog2.png' %}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'carousel/img/dog3.png' %}" class="d-block w-100" alt="..." href="#">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+    <br>
+        <!-- Marketing messaging and featurettes
+        ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="{% static 'carousel/img/dog1.png' %}" class="bd-placeholder-img rounded-circle" width="140" height="140" 
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                    <h2 class="fw-normal">MEMES</h2>
+                    <p>Los perros son el mejor animal para crear memes, change my mind.</p>
+                    <p><a class="btn btn-primary" href="{% url 'memes' %}">Ver »</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="{% static 'carousel/img/dog2.png' %}" class="bd-placeholder-img rounded-circle" width="140" height="140" 
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                    <h2 class="fw-normal">WALLPAPERS</h2>
+                    <p>Fondos de pantalla de pana robados de pinterest.</p>
+                    <p><a class="btn btn-primary" href="{% url 'fondos' %}">Ver »</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="{% static 'carousel/img/dog3.png' %}" class="bd-placeholder-img rounded-circle" width="140" height="140" 
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                    <h2 class="fw-normal">CHEEMS :C</h2>
+                    <p>Hermanito no quiero que Cheems se muera :c</p>
+                    <p><a class="btn btn-primary" href="{% url 'cheems' %}">Ver »</a></p>
+                </div>
+
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+
+        <!-- FOOTER -->
+    </main>
+{% endblock contenido %}
